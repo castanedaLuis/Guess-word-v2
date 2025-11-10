@@ -1,8 +1,9 @@
 {
   "name": "package.json",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "type": "module",
+  "author": "Jose luis Castañeda Osornio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

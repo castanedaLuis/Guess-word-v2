@@ -1,0 +1,252 @@
+body {
+    background-color: black;
+    margin: 0;
+    position: relative;
+    min-height: 200vh;
+}
+
+main {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 250px;
+}
+
+.line {
+    display: flex;
+    gap: 2px;
+}
+
+.line.isCurrentRow {
+    border: 1px solid #00c4cc;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.tile {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px black;
+    text-align: center;
+    align-content: center;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.correct {
+    background-color: green !important;
+}
+
+.close {
+    background-color: yellow !important;
+}
+
+.incorrect {
+    background-color: white !important;
+}
+
+.container-result {
+    display: flex;
+    gap: 10px;
+}
+
+.container-result-solution {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.tile-solution {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px black;
+    text-align: center;
+    align-content: center;
+    font-size: 26px;
+
+}
+
+.btn-restart {
+    cursor: pointer;
+    padding: 10px 18px;
+    background-color: #00c4cc;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 196, 204, 0.3);
+}
+
+/* Efecto hover */
+.btn-restart:hover {
+    background-color: #00a3aa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 196, 204, 0.4);
+}
+
+/* Efecto al hacer click */
+.btn-restart:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 196, 204, 0.2);
+}
+
+/* Accesibilidad (cuando el botón tiene foco con el teclado) */
+.btn-restart:focus {
+    outline: 2px solid #00c4cc;
+    outline-offset: 3px;
+}
+
+.choose-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+    width: 300px;
+    margin: 2rem auto;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.choose-level label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.choose-level input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #00c4cc;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.choose-level input:focus {
+    outline: none;
+    border-color: #00eaff;
+    box-shadow: 0 0 8px #00eaff;
+}
+
+.btn-start {
+    background: linear-gradient(90deg, #00eaff, #00c4cc);
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #00eaff;
+}
+
+.btn-start:active {
+    transform: translateY(0);
+    box-shadow: 0 0 6px #00eaff;
+}
+
+.btn-start:disabled {
+    background: linear-gradient(135deg, #555 0%, #333 100%);
+    color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    transform: none;
+    transition: all 0.3s ease;
+}
+
+.result-container {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    width: 250px;
+    margin: 50px auto;
+}
+
+.result-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.winner {
+    color: #2ecc71;
+}
+
+.loser {
+    color: #e74c3c;
+}
+
+.retry-button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.retry-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.retry-button:active {
+    transform: scale(0.97);
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .game {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-result {
+        flex-direction: column;
+    }
+}
